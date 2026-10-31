@@ -188,4 +188,46 @@
     <wire from="(490,150)" to="(490,220)"/>
     <wire from="(490,330)" to="(490,350)"/>
   </circuit>
+  <circuit name="AND_NOR">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="AND_NOR"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="4.0"/>
+    <comp lib="0" loc="(470,90)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="0" loc="(580,640)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="north"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(660,100)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="south"/>
+    </comp>
+    <comp loc="(460,290)" name="NOR_T"/>
+    <comp loc="(580,550)" name="NOR_T"/>
+    <comp loc="(680,290)" name="NOR_T"/>
+    <wire from="(440,200)" to="(440,230)"/>
+    <wire from="(440,200)" to="(470,200)"/>
+    <wire from="(460,290)" to="(460,400)"/>
+    <wire from="(460,400)" to="(530,400)"/>
+    <wire from="(470,200)" to="(480,200)"/>
+    <wire from="(470,90)" to="(470,200)"/>
+    <wire from="(480,200)" to="(480,230)"/>
+    <wire from="(530,400)" to="(530,450)"/>
+    <wire from="(530,450)" to="(560,450)"/>
+    <wire from="(560,450)" to="(560,490)"/>
+    <wire from="(580,550)" to="(580,640)"/>
+    <wire from="(600,450)" to="(600,490)"/>
+    <wire from="(600,450)" to="(620,450)"/>
+    <wire from="(620,400)" to="(620,450)"/>
+    <wire from="(620,400)" to="(680,400)"/>
+    <wire from="(660,100)" to="(660,200)"/>
+    <wire from="(660,200)" to="(660,230)"/>
+    <wire from="(660,200)" to="(700,200)"/>
+    <wire from="(680,290)" to="(680,400)"/>
+    <wire from="(700,200)" to="(700,230)"/>
+  </circuit>
 </project>
