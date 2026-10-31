@@ -128,12 +128,14 @@
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="4.0"/>
     <appear>
-      <rect fill="none" height="20" stroke="#000000" width="220" x="50" y="50"/>
-      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="140" y="52">x</text>
-      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="140" y="62">y</text>
-      <circ-anchor facing="south" x="140" y="70"/>
-      <circ-port dir="in" pin="630,310" x="140" y="50"/>
-      <circ-port dir="out" pin="600,590" x="140" y="70"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="158" y="66">x</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="160" y="118">y</text>
+      <rect height="19" stroke="none" width="88" x="116" y="79"/>
+      <rect fill="none" height="80" stroke="#000000" stroke-width="2" width="107" x="106" y="50"/>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="161" y="94">NOT_NOR</text>
+      <circ-anchor facing="south" x="160" y="130"/>
+      <circ-port dir="in" pin="630,310" x="160" y="50"/>
+      <circ-port dir="out" pin="600,590" x="160" y="130"/>
     </appear>
     <comp lib="0" loc="(600,590)" name="Pin">
       <a name="appearance" val="NewPins"/>
@@ -153,5 +155,37 @@
     <wire from="(620,370)" to="(620,380)"/>
     <wire from="(620,370)" to="(630,370)"/>
     <wire from="(630,310)" to="(630,370)"/>
+  </circuit>
+  <circuit name="OR_NOR">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="OR_NOR"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="4.0"/>
+    <comp lib="0" loc="(450,150)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="south"/>
+      <a name="label" val="x"/>
+    </comp>
+    <comp lib="0" loc="(470,470)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="north"/>
+      <a name="label" val="z"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(490,150)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="south"/>
+      <a name="label" val="y"/>
+    </comp>
+    <comp loc="(470,280)" name="NOR_T"/>
+    <comp loc="(470,410)" name="NOR_T"/>
+    <wire from="(450,150)" to="(450,220)"/>
+    <wire from="(450,330)" to="(450,350)"/>
+    <wire from="(450,330)" to="(470,330)"/>
+    <wire from="(470,280)" to="(470,330)"/>
+    <wire from="(470,330)" to="(490,330)"/>
+    <wire from="(470,410)" to="(470,470)"/>
+    <wire from="(490,150)" to="(490,220)"/>
+    <wire from="(490,330)" to="(490,350)"/>
   </circuit>
 </project>
