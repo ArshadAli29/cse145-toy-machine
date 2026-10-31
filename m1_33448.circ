@@ -157,10 +157,22 @@
     <wire from="(630,310)" to="(630,370)"/>
   </circuit>
   <circuit name="OR_NOR">
-    <a name="appearance" val="logisim_evolution"/>
+    <a name="appearance" val="custom"/>
     <a name="circuit" val="OR_NOR"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="4.0"/>
+    <appear>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="128" y="64">x</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="187" y="61">y</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="163" y="131">z</text>
+      <rect height="20" stroke="none" width="93" x="119" y="70"/>
+      <rect fill="none" height="90" stroke="#000000" stroke-width="2" width="139" x="97" y="50"/>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="159" y="85">OR_NOR</text>
+      <circ-anchor facing="east" x="160" y="140"/>
+      <circ-port dir="in" pin="450,150" x="130" y="50"/>
+      <circ-port dir="in" pin="490,150" x="190" y="50"/>
+      <circ-port dir="out" pin="470,470" x="160" y="140"/>
+    </appear>
     <comp lib="0" loc="(450,150)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="south"/>
@@ -189,22 +201,38 @@
     <wire from="(490,330)" to="(490,350)"/>
   </circuit>
   <circuit name="AND_NOR">
-    <a name="appearance" val="logisim_evolution"/>
+    <a name="appearance" val="custom"/>
     <a name="circuit" val="AND_NOR"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="clabelup" val="north"/>
     <a name="simulationFrequency" val="4.0"/>
+    <appear>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="138" y="64">x</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="188" y="62">y</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="162" y="105">z</text>
+      <rect height="16" stroke="none" width="107" x="112" y="71"/>
+      <rect fill="none" height="60" stroke="#000000" stroke-width="2" width="126" x="103" y="50"/>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="162" y="83">AND_NOR</text>
+      <circ-anchor facing="east" x="160" y="110"/>
+      <circ-port dir="in" pin="470,90" x="140" y="50"/>
+      <circ-port dir="in" pin="660,100" x="190" y="50"/>
+      <circ-port dir="out" pin="580,640" x="160" y="110"/>
+    </appear>
     <comp lib="0" loc="(470,90)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="south"/>
+      <a name="label" val="x"/>
     </comp>
     <comp lib="0" loc="(580,640)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="north"/>
+      <a name="label" val="z"/>
       <a name="type" val="output"/>
     </comp>
     <comp lib="0" loc="(660,100)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="south"/>
+      <a name="label" val="y"/>
     </comp>
     <comp loc="(460,290)" name="NOR_T"/>
     <comp loc="(580,550)" name="NOR_T"/>
@@ -229,5 +257,53 @@
     <wire from="(660,200)" to="(700,200)"/>
     <wire from="(680,290)" to="(680,400)"/>
     <wire from="(700,200)" to="(700,230)"/>
+  </circuit>
+  <circuit name="XOR_SOP">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="XOR_SOP"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="4.0"/>
+    <comp lib="0" loc="(440,190)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="0" loc="(720,830)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="north"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(840,190)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="south"/>
+    </comp>
+    <comp loc="(440,420)" name="NOT_NOR"/>
+    <comp loc="(530,650)" name="AND_NOR"/>
+    <comp loc="(720,800)" name="OR_NOR"/>
+    <comp loc="(840,410)" name="NOT_NOR"/>
+    <comp loc="(850,650)" name="AND_NOR"/>
+    <wire from="(440,190)" to="(440,290)"/>
+    <wire from="(440,290)" to="(440,340)"/>
+    <wire from="(440,290)" to="(740,290)"/>
+    <wire from="(440,420)" to="(440,560)"/>
+    <wire from="(440,560)" to="(510,560)"/>
+    <wire from="(510,560)" to="(510,590)"/>
+    <wire from="(530,650)" to="(530,680)"/>
+    <wire from="(530,680)" to="(690,680)"/>
+    <wire from="(560,250)" to="(560,590)"/>
+    <wire from="(560,250)" to="(840,250)"/>
+    <wire from="(690,680)" to="(690,710)"/>
+    <wire from="(720,800)" to="(720,830)"/>
+    <wire from="(740,290)" to="(740,540)"/>
+    <wire from="(740,540)" to="(830,540)"/>
+    <wire from="(750,680)" to="(750,710)"/>
+    <wire from="(750,680)" to="(850,680)"/>
+    <wire from="(830,540)" to="(830,590)"/>
+    <wire from="(840,190)" to="(840,250)"/>
+    <wire from="(840,250)" to="(840,330)"/>
+    <wire from="(840,410)" to="(840,480)"/>
+    <wire from="(840,480)" to="(880,480)"/>
+    <wire from="(850,650)" to="(850,680)"/>
+    <wire from="(880,480)" to="(880,590)"/>
+    <wire from="(880,590)" to="(890,590)"/>
   </circuit>
 </project>
