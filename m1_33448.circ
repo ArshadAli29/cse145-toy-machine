@@ -259,22 +259,37 @@
     <wire from="(700,200)" to="(700,230)"/>
   </circuit>
   <circuit name="XOR_SOP">
-    <a name="appearance" val="logisim_evolution"/>
+    <a name="appearance" val="custom"/>
     <a name="circuit" val="XOR_SOP"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="4.0"/>
+    <appear>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="126" y="64">x</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="187" y="63">y</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="162" y="121">z</text>
+      <rect height="19" stroke="none" width="86" x="117" y="85"/>
+      <rect fill="none" height="80" stroke="#000000" stroke-width="2" width="117" x="102" y="50"/>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="159" y="100">XOR_SOP</text>
+      <circ-anchor facing="east" x="160" y="130"/>
+      <circ-port dir="in" pin="440,190" x="130" y="50"/>
+      <circ-port dir="in" pin="840,190" x="190" y="50"/>
+      <circ-port dir="out" pin="720,830" x="160" y="130"/>
+    </appear>
     <comp lib="0" loc="(440,190)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="south"/>
+      <a name="label" val="x"/>
     </comp>
     <comp lib="0" loc="(720,830)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="north"/>
+      <a name="label" val="z"/>
       <a name="type" val="output"/>
     </comp>
     <comp lib="0" loc="(840,190)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="south"/>
+      <a name="label" val="y"/>
     </comp>
     <comp loc="(440,420)" name="NOT_NOR"/>
     <comp loc="(530,650)" name="AND_NOR"/>
@@ -571,5 +586,47 @@
     <wire from="(840,410)" to="(950,410)"/>
     <wire from="(860,430)" to="(860,520)"/>
     <wire from="(860,430)" to="(950,430)"/>
+  </circuit>
+  <circuit name="HALF_ADDER">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="HALF_ADDER"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="4.0"/>
+    <comp lib="0" loc="(380,220)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="south"/>
+      <a name="label" val="X"/>
+    </comp>
+    <comp lib="0" loc="(430,220)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="south"/>
+      <a name="label" val="Y"/>
+    </comp>
+    <comp lib="0" loc="(680,450)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="north"/>
+      <a name="label" val="S"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(860,530)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="north"/>
+      <a name="label" val="C"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp loc="(680,340)" name="XOR_SOP"/>
+    <comp loc="(860,480)" name="AND_NOR"/>
+    <wire from="(380,220)" to="(380,250)"/>
+    <wire from="(380,250)" to="(650,250)"/>
+    <wire from="(430,220)" to="(430,230)"/>
+    <wire from="(430,230)" to="(710,230)"/>
+    <wire from="(650,250)" to="(650,260)"/>
+    <wire from="(650,250)" to="(840,250)"/>
+    <wire from="(680,340)" to="(680,450)"/>
+    <wire from="(710,230)" to="(710,260)"/>
+    <wire from="(710,230)" to="(890,230)"/>
+    <wire from="(840,250)" to="(840,420)"/>
+    <wire from="(860,480)" to="(860,530)"/>
+    <wire from="(890,230)" to="(890,420)"/>
   </circuit>
 </project>
