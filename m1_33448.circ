@@ -38,7 +38,7 @@
     <sep/>
     <tool lib="0" name="Pin"/>
     <tool lib="0" name="Pin">
-      <a name="facing" val="west"/>
+      <a name="facing" val="north"/>
       <a name="type" val="output"/>
     </tool>
     <sep/>
@@ -322,10 +322,28 @@
     <wire from="(880,590)" to="(890,590)"/>
   </circuit>
   <circuit name="MAJ">
-    <a name="appearance" val="logisim_evolution"/>
+    <a name="appearance" val="custom"/>
     <a name="circuit" val="MAJ"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="4.0"/>
+    <appear>
+      <rect height="13" stroke="none" width="4" x="128" y="37"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="126" y="62">x</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="156" y="61">y</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="187" y="63">z</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="183" y="126">out_MAJ</text>
+      <rect height="24" stroke="none" width="64" x="126" y="74"/>
+      <rect fill="none" height="82" stroke="#000000" stroke-width="2" width="102" x="109" y="50"/>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="158" y="90">MAJ</text>
+      <rect height="13" stroke="none" width="4" x="158" y="37"/>
+      <rect height="13" stroke="none" width="4" x="188" y="38"/>
+      <rect height="13" stroke="none" width="4" x="156" y="131"/>
+      <circ-anchor facing="south" x="160" y="140"/>
+      <circ-port dir="in" pin="380,100" x="130" y="40"/>
+      <circ-port dir="in" pin="430,100" x="160" y="40"/>
+      <circ-port dir="in" pin="480,100" x="190" y="40"/>
+      <circ-port dir="out" pin="1070,380" x="160" y="140"/>
+    </appear>
     <comp lib="0" loc="(1070,380)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
@@ -421,10 +439,28 @@
     <wire from="(900,360)" to="(950,360)"/>
   </circuit>
   <circuit name="ODD">
-    <a name="appearance" val="logisim_evolution"/>
+    <a name="appearance" val="custom"/>
     <a name="circuit" val="ODD"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="4.0"/>
+    <appear>
+      <rect height="13" stroke="none" width="3" x="119" y="38"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="117" y="63">x</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="137" y="61">y</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="159" y="61">z</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="167" y="121">out_ODD</text>
+      <rect height="18" stroke="none" width="66" x="111" y="82"/>
+      <rect fill="none" height="79" stroke="#000000" stroke-width="2" width="91" x="100" y="50"/>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="141" y="96">ODD</text>
+      <rect height="13" stroke="none" width="3" x="138" y="37"/>
+      <rect height="13" stroke="none" width="3" x="159" y="36"/>
+      <rect height="13" stroke="none" width="3" x="138" y="128"/>
+      <circ-anchor facing="east" x="140" y="130"/>
+      <circ-port dir="in" pin="380,100" x="120" y="40"/>
+      <circ-port dir="in" pin="430,100" x="140" y="40"/>
+      <circ-port dir="in" pin="480,100" x="160" y="40"/>
+      <circ-port dir="out" pin="1070,380" x="140" y="130"/>
+    </appear>
     <comp lib="0" loc="(1070,380)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
@@ -628,5 +664,58 @@
     <wire from="(840,250)" to="(840,420)"/>
     <wire from="(860,480)" to="(860,530)"/>
     <wire from="(890,230)" to="(890,420)"/>
+  </circuit>
+  <circuit name="FULL_ADDER_A">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="FULL_ADDER_A"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="4.0"/>
+    <comp lib="0" loc="(450,160)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="south"/>
+      <a name="label" val="X"/>
+    </comp>
+    <comp lib="0" loc="(500,160)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="south"/>
+      <a name="label" val="Y"/>
+    </comp>
+    <comp lib="0" loc="(550,160)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="south"/>
+      <a name="label" val="CIN"/>
+    </comp>
+    <comp lib="0" loc="(690,560)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="north"/>
+      <a name="label" val="S"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(930,650)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="north"/>
+      <a name="label" val="COUT"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp loc="(690,440)" name="ODD"/>
+    <comp loc="(930,600)" name="MAJ">
+      <a name="facing" val="south"/>
+    </comp>
+    <wire from="(450,160)" to="(450,200)"/>
+    <wire from="(450,200)" to="(670,200)"/>
+    <wire from="(500,160)" to="(500,180)"/>
+    <wire from="(500,180)" to="(690,180)"/>
+    <wire from="(550,160)" to="(710,160)"/>
+    <wire from="(670,200)" to="(670,350)"/>
+    <wire from="(670,200)" to="(900,200)"/>
+    <wire from="(690,180)" to="(690,350)"/>
+    <wire from="(690,180)" to="(930,180)"/>
+    <wire from="(690,440)" to="(690,560)"/>
+    <wire from="(710,160)" to="(710,350)"/>
+    <wire from="(710,160)" to="(960,160)"/>
+    <wire from="(900,200)" to="(900,500)"/>
+    <wire from="(930,180)" to="(930,500)"/>
+    <wire from="(930,600)" to="(930,650)"/>
+    <wire from="(960,160)" to="(960,500)"/>
   </circuit>
 </project>
